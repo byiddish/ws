@@ -419,14 +419,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
         var isOccasion = false;
-        $('li a span').each(function(){
+        var occasion = $('.page_header h1').text().replace(/ /g,"_").toLowerCase();
+        console.log("occasion", occasion);
+        $('.breadcrumnb li a span').each(function(){
             var span = this;
             console.log("span:", span.innerHTML);
             if (span.innerHTML == "Occasions") {
                 isOccasion = true;
             }
         })
-        // if (isOccasion) {
-        //     alert("isOccasion");
-        // }
+        if (isOccasion) {
+            $('.product-items a img').each(function(){
+                var type = $(this).attr("alt").replace(/ /g,"_").toLowerCase();
+                var imageSrc = $(this).attr('src');
+                $(this).attr("src","assets/images/" + type +"_" + occasion + ".jpg");
+                console.log("type", type);
+                console.log("imageSrc", "assets/images/" + type + occasion + ".jpg");
+            })
+        }
+        setTimeout(function(){ $('.product-items img').css('opacity', 1); }, 300);
 </script>
