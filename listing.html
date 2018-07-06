@@ -1516,6 +1516,7 @@
 <script>
     var type = $('.page_headers').text().trim().replace(/ /g, "_").toLowerCase();
     var defaultImage = $("#main-image img").attr('src');
+    var occasionMainImage = defaultImage;
     var sizeSelect = undefined;
     var occasionSelect = undefined;
     var isLarge = true;
@@ -1530,41 +1531,36 @@
         }
     })
 
-    function changeImages() {
+    var changeImages = function() {
         isLarge = $(sizeSelect).children("option").filter(":selected").text().includes("Large");
         occasion = $(occasionSelect).children("option").filter(":selected").text().trim().replace(/ /g, "_").toLowerCase();
-        console.log("occasion",occasion);
         if (isLarge) {
             if (occasion==="none") {
-                $('.main-image img').each(function(){
-                    $(this).attr("src", "assets/images/" + type + ".jpg");
-                })
+                occasionMainImage = ("assets/images/" + type + ".jpg");
+                $('.main-image img').attr("src", "assets/images/" + type + ".jpg");
                 $('.main-image a').attr("href", "assets/images/" + type + ".jpg");
                 $('.image1 a').attr("href", "assets/images/" + type + ".jpg");
                 $('.image1 img').attr("src", "thumbnail.asp?file=assets/images/" + type + ".jpg&maxx=108&maxy=108");
             } else {
-                $('.main-image img').each(function(){
-                    $(this).attr("src", "assets/images/" + type + "_" + occasion + ".jpg");
-                })
+                occasionMainImage = ("assets/images/" + type + "_" + occasion + ".jpg");
+                $('.main-image img').attr("src", "assets/images/" + type + "_" + occasion + ".jpg");
                 $('.main-image a').attr("href", "assets/images/" + type + "_" + occasion + ".jpg");
                 $('.image1 a').attr("href", "assets/images/" + type + "_" + occasion + ".jpg");
                 $('.image1 img').attr("src", "thumbnail.asp?file=assets/images/" + type + "_" + occasion + ".jpg&maxx=108&maxy=108");
             }
         } else {
             if (occasion==="none") {
-                $('.main-image img').each(function(){
-                    $(this).attr("src", "assets/images/" + type + "_sm.jpg");
-                })
+                occasionMainImage = ("assets/images/" + type + "_sm.jpg");
+                $('.main-image img').attr("src", "assets/images/" + type + "_sm.jpg");
                 $('.main-image a').attr("href", "assets/images/" + type + "_sm.jpg");
                 $('.image1 a').attr("href", "thumbnail.asp?file=assets/images/" + type + "_sm.jpg&maxx=108&maxy=108");
                 $('.image1 img').attr("src", "thumbnail.asp?file=assets/images/" + type + "_sm.jpg&maxx=108&maxy=108");
             } else {
-                $('.main-image img').each(function(){
-                    $(this).attr("src", "assets/images/" + type + "_" + occasion + "_sm.jpg");
-                })
+                occasionMainImage = ("assets/images/" + type + "_" + occasion + "_sm.jpg");
+                $('.main-image img').attr("src", "assets/images/" + type + "_" + occasion + "_sm.jpg");
                 $('.main-image a').attr("href", "assets/images/" + type + "_" + occasion + "_sm.jpg");
                 $('.image1 img').attr("src", "thumbnail.asp?file=assets/images/" + type + "_" + occasion + "_sm.jpg&maxx=108&maxy=108");
-                $('.image1 a').attr("href", "thumbnail.asp?file=assets/images/" + type + "_" + occasion + "_sm.jpg&maxx=108&maxy=108");
+                $('.image1 a').attr("href", "assets/images/" + type + "_" + occasion + "_sm.jpg");
             }
         }
     }
@@ -1575,6 +1571,12 @@
     $(occasionSelect).on('change', function(){
         changeImages(); 
     });
+
+    $('.prod-thumb').on('click', function(event){
+        var imageScr=$(this).find('a').attr("href");
+        $("#main-image img").attr('src', imageScr);
+        $("#main-image a").attr('href', imageScr);
+    })
     // $("select[name*='option-90']").on('change', function(){
     //     var selected=$(this).children("option").filter(":selected").text();
     //     if (selected.includes("Birthday")) {
