@@ -2321,3 +2321,11 @@ display:none;
 .product-item .name::before{
 display:none;
 }
+
+.product-items .product-item{
+    pointer-events: none;
+}
+
+.product-items a{
+    pointer-events: all;
+}

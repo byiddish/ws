@@ -1,0 +1,43 @@
+<div class="product-item" data-catalogid="[catalogid]" data-ajaxcart="1" data-addcart-callback="addcart_callback">
+    <a href="add_cart.asp?quick=1&amp;item_id=[catalogid]"></a>
+    <div class="img">
+        <a href="product.asp?itemid=[catalogid]">
+            <img src="[THUMBNAIL]" alt="[name]" class="img-responsive" />
+        </a>
+    </div>
+</a>
+    <div class="name">
+        <a href="product.asp?itemid=[catalogid]">[name]</a>
+    </div>
+
+    <div class="price">
+        <!--START: freeshippingblock-->
+        <span class="freeshipping">[freeshipping]</span>
+        <!--END: freeshippingblock-->
+        <!--START: ITEMPRICE-->
+        <span class="regular-price">[ITEMPRICE]</span>
+        <!--END: ITEMPRICE-->
+        <!--START: SALEPRICE-->
+        <del class="regular-price">[ITEMPRICE]</del>
+        <span class="sale-price">[ITEMSALEPRICE]</span>
+        <span class="on-sale-badge">[product_sale]</span>
+        <!--END: SALEPRICE-->
+    </div>
+
+    <div class="status">
+        <!--START: product_availability-->
+        <span class="availability">[availability]</span>
+        <!--END: product_availability-->
+    </div>
+
+    <div class="reviews">
+        <!--START: product_review-->
+        <!--START: product_review_average-->
+        <span class="reviews-stars rating-[review_average]"></span>
+        <span class="reviews-count">([review_count])</span>
+        <!--END: product_review_average-->
+        <!--END: product_review-->
+    </div>
+</div>
+
+<!-- SW Custom -->
