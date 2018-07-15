@@ -2317,3 +2317,7 @@ top:0px !important;
 .top-nav{
 display:none;
 }
+
+.product-item .name::before{
+display:none;
+}
