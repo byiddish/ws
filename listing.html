@@ -59,14 +59,22 @@
 
             <div class="product-cols row">
                 <div class="col-md-6">
+                    <!-- SW Custom -->
                     <!--START: image1-->
                     <div id="main-image" class="main-image text-center">
+                        <img itemprop="image" src="thumbnail.asp?file=[image1]&maxx=[image_medium_w]&maxy=0" id="large" alt="[name]" class="img-responsive"
+                            />
+                       <div name="imagecaptiont" title="[imagecaption1]" id="imagecaptiont" class="imagecaptiont">[imagecaption1]</div>
+                    </div>
+                    <!-- End SW Custom -->
+                    <!-- Original -->
+                    <!-- <div id="main-image" class="main-image text-center">
                         <a href="[image1]" class="[3dzoom_class]" id="listing_main_image_link" title="[imagecaption1]" data-options="[zoom_options]">
                             <img itemprop="image" src="thumbnail.asp?file=[image1]&maxx=[image_medium_w]&maxy=0" id="large" alt="[name]" class="img-responsive"
                             />
                         </a>
                         <div name="imagecaptiont" title="[imagecaption1]" id="imagecaptiont" class="imagecaptiont">[imagecaption1]</div>
-                    </div>
+                    </div> -->
                     <!--END: image1-->
 
                     <!--START: realmediaBlock-->
@@ -1572,10 +1580,22 @@
         changeImages(); 
     });
 
-    $('.prod-thumb').on('click', function(event){
+    $('.image1').on('click touchstart tap', function(e){
+        $('.image1').trigger("click");
+        var imageScr=$(this).find('a').attr("href");
+        $(".mz-loading img").attr('src', imageScr);
+        $("#main-image a").attr('href', imageScr);
+        $("#main-image img").each(function(){
+            $(this).attr('src', imageScr);
+        })
+        e.preventDefault();
+    })
+
+    $('.prod-thumb').on('click touchstart tap', function(event){
         var imageScr=$(this).find('a').attr("href");
         $("#main-image img").attr('src', imageScr);
         $("#main-image a").attr('href', imageScr);
+        $(".image1 a").attr('data-image', "thumbnail.asp?file="+imageScr+"&maxx=750&maxy=0");
     })
     // $("select[name*='option-90']").on('change', function(){
     //     var selected=$(this).children("option").filter(":selected").text();

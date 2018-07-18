@@ -2329,3 +2329,18 @@ display:none;
 .product-items a{
     pointer-events: all;
 }
+
+.addl-images ul.slides li a {
+	pointer-events:  none;
+}
+
+.prod-thumb{
+    cursor: pointer;
+    pointer-events: all;
+}
+
+@media (max-width: 767px){
+.content-holder {
+    padding-top: 0;
+ }
+}
