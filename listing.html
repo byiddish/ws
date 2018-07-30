@@ -1534,7 +1534,7 @@
         var select = $(this).find("select");
         if (label.includes("size")) {
             sizeSelect = select;
-        } else if (label.includes("ocassion")) {
+        } else if (label.includes("occasion") || label.includes("ocassion")) {
             occasionSelect = select;
         }
     })
@@ -1571,6 +1571,7 @@
                 $('.image1 a').attr("href", "assets/images/" + type + "_" + occasion + "_sm.jpg");
             }
         }
+        // $('#main-image img').css('opacity', "1 !important");
     }
     changeImages();
     $(sizeSelect).on('change', function(){
@@ -1597,20 +1598,4 @@
         $("#main-image a").attr('href', imageScr);
         $(".image1 a").attr('data-image', "thumbnail.asp?file="+imageScr+"&maxx=750&maxy=0");
     })
-    // $("select[name*='option-90']").on('change', function(){
-    //     var selected=$(this).children("option").filter(":selected").text();
-    //     if (selected.includes("Birthday")) {
-    //         $("#large").attr('src', 'https://www.shutterfly.com/ideas/wp-content/uploads/2016/08/50-happy-birthday-quotes-thumb.jpg');
-    //     } else if (selected.includes("Anniversary")) {
-    //         $("#large").attr('src', 'https://d2z4fd79oscvvx.cloudfront.net/0025991_strawberry_rose_cake_385.jpeg');
-    //     } else if (selected.includes("Mazel")) {
-    //         $("#large").attr('src', 'https://img.etsystatic.com/il/b174af/1262563927/il_570xN.1262563927_9w4x.jpg?version=1');
-    //     } else if (selected.includes("Congratulations")) {
-    //         $("#large").attr('src', 'https://i.ebayimg.com/images/g/dqUAAOSwU-pXtHju/s-l300.jpg');
-    //     } else if (selected.includes("Mothers Day")) {
-    //         $("#large").attr('src', 'http://www.cakefeasta.com/wp-content/uploads/2017/04/Three-Flowers-Cake.jpg');
-    //     }else {
-    //         $("#large").attr('src', defaultImage);
-    //     }
-    // })
 </script>

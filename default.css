@@ -2301,6 +2301,10 @@ body.leftbar.rightbar .cat-items-grid{
 opacity: 0;
 }
 
+/* #main-image img{
+    opacity: 0 !important;
+} */
+
 figure.mz-figure {
     pointer-events: none;
 }
