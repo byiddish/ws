@@ -2588,7 +2588,24 @@
           var deliveryDate = $(this).val();
           var parts = deliveryDate.split('/');
           shipByDateField.val("*" + parts[0] + "/" + (parts[1] - 1) + "/" + parts[2] + "*");
-      })
+	  })
+	  
+	  $("#shipping_zip").on('change', function(){
+		  var zip = $(this).val();
+		  if(zip === "11204" || zip === "11218" || zip === "11219" || zip === "11230" || zip === "11210" || zip === "08701"){
+			  alert("For location selected please visit siegelmanscakes.com");
+		  }
+	  })
+
+	   $("#billing_zip").on('change', function(){
+		var zip = $(this).val();
+		   var isSameAsBilling = $('input[name=sameAsBilling]:checked').val() === "ON"
+		   if(isSameAsBilling){
+		  if(zip === "11204" || zip === "11218" || zip === "11219" || zip === "11230" || zip === "11210" || zip === "08701"){
+			  alert("For location selected please visit siegelmanscakes.com");
+		  }
+		   }
+	  })
 	});
 </script>
 <!--END: template_scripts-->
