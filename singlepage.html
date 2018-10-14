@@ -2589,22 +2589,33 @@
           var parts = deliveryDate.split('/');
           shipByDateField.val("*" + parts[0] + "/" + (parts[1] - 1) + "/" + parts[2] + "*");
 	  })
-	  
-	  $("#shipping_zip").on('change', function(){
-		  var zip = $(this).val();
+
+	  function checkZip(num){
+		var isSameAsBilling = $('input[name=sameAsBilling]:checked').val() === "ON";
+		if(isSameAsBilling){
+			var zip = $("#billing_zip").val();
 		  if(zip === "11204" || zip === "11218" || zip === "11219" || zip === "11230" || zip === "11210" || zip === "08701"){
 			  alert("For location selected please visit siegelmanscakes.com");
 		  }
+	  }
+	  else if(num === 1 || num === 0){
+		var zip = $("#shipping_zip").val();
+		  if(zip === "11204" || zip === "11218" || zip === "11219" || zip === "11230" || zip === "11210" || zip === "08701"){
+			  alert("For location selected please visit siegelmanscakes.com");
+		  }
+	  }
+	}
+
+	$('input[name=sameAsBilling]').on('change', function(){
+		checkZip(0);
+	  })
+	  
+	  $("#shipping_zip").on('change', function(){
+		checkZip(1);
 	  })
 
 	   $("#billing_zip").on('change', function(){
-		var zip = $(this).val();
-		   var isSameAsBilling = $('input[name=sameAsBilling]:checked').val() === "ON"
-		   if(isSameAsBilling){
-		  if(zip === "11204" || zip === "11218" || zip === "11219" || zip === "11230" || zip === "11210" || zip === "08701"){
-			  alert("For location selected please visit siegelmanscakes.com");
-		  }
-		   }
+		checkZip(2);
 	  })
 	});
 </script>
