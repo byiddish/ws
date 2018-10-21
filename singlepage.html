@@ -1891,7 +1891,7 @@
 							<div id="spanCheckout" class="checkout-section clearfix">
 								<a href="view_cart.asp" class="btn btn-link"><i class="icon-left"></i> Return to Cart</a>
 								<div class="pull-right">
-									<button type="button" onclick="doCheckout(this.form,'checkoutButton');" class="btn btn-lg btn-primary"><i class="icon-basket"></i> [checkout3_submitbutton]</button>
+									<button type="button" id=checkoutSw onclick="doCheckout(this.form,'checkoutButton');" class="btn btn-lg btn-primary"><i class="icon-basket"></i> [checkout3_submitbutton]</button>
 								</div>
 							</div>
 							<div id="divCheckout" name="divCheckout" class="alert alert-success" style="display:none;">
@@ -2596,15 +2596,19 @@
 			var zip = $("#billing_zip").val();
 		  if(zip === "11204" || zip === "11218" || zip === "11219" || zip === "11230" || zip === "11210" || zip === "08701"){
 			  alert("For location selected please visit siegelmanscakes.com");
+			  $("#billing_zip").val("");
 		  }
 	  }
 	  else if(num === 1 || num === 0){
 		var zip = $("#shipping_zip").val();
 		  if(zip === "11204" || zip === "11218" || zip === "11219" || zip === "11230" || zip === "11210" || zip === "08701"){
 			  alert("For location selected please visit siegelmanscakes.com");
+			  $("#shipping_zip").val("");
 		  }
 	  }
 	}
+
+	checkZip(1);
 
 	$('input[name=sameAsBilling]').on('change', function(){
 		checkZip(0);
