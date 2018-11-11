@@ -2547,14 +2547,13 @@ button#google-pay-button {
           shipByDateField.val("*" + parts[0] + "/" + (parts[1] - 1) + "/" + parts[2] + "*");
 	  })
 
-	  function checkZip(num){
-        var isCoporate = false
-        $('.shoppingCartItems div').each(function(){
-            if($(this).innerHTML.indexOf("Corporate") !== -1){
+      var isCoporate = false
+        $('.item-options div').each( function() {
+            if($(this).text().indexOf('Corporate') >= 0){
                 isCoporate = true}
-                console.log("this:", this);
                 });
-        console.log("isCorporate:", isCoporate);
+
+	  function checkZip(num){
 		var isSameAsBilling = $('input[name=sameAsBilling]:checked').val() === "ON";
 		if(isSameAsBilling){
 			var zip = $("#billing_zip").val();
@@ -2572,18 +2571,20 @@ button#google-pay-button {
 	  }
 	}
 
-	checkZip(1);
+    if(!isCoporate){
+        checkZip(1);
 
-	$('input[name=sameAsBilling]').on('change', function(){
-		checkZip(0);
-	  })
-	  
-	  $("#shipping_zip").on('change', function(){
-		checkZip(1);
-	  })
+$('input[name=sameAsBilling]').on('change', function(){
+    checkZip(0);
+  })
+  
+  $("#shipping_zip").on('change', function(){
+    checkZip(1);
+  })
 
-	   $("#billing_zip").on('change', function(){
-		checkZip(2);
-	  })
+   $("#billing_zip").on('change', function(){
+    checkZip(2);
+  })
+    }
 	});
 </script>
