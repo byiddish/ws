@@ -515,6 +515,14 @@ margin-right: 38px;
   margin-left: 38px;
 }
 
+#lowerBar{
+  display: none;
+}
+
+.footerImage{
+  height: 230px;
+}
+
 @media only screen and (max-width: 767px) {
   .swMobile {
     display: block;
