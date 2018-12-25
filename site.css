@@ -67,6 +67,7 @@ body {
   font-weight: 400;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 img {
   border: 0;
@@ -465,6 +466,7 @@ header{
 
 .swMobile {
   display: none;
+  background-color: hsl(34, 93%, 54%) !important;
 }
 
 nav#catNavMenu{
@@ -495,9 +497,13 @@ a.subcat:hover {
 width: 100%;
 }
 
+ul#desktopMenu li a{
+  padding: 0 !important;
+}
+
 #desktopMenu li:nth-child(1){
 float: left;
-margin-right: 38px;
+margin-right: 69px;
 }
 
 #desktopMenu li:nth-child(2){
@@ -506,13 +512,12 @@ margin-right: 38px;
 }
 
 #desktopMenu li:nth-child(3){
-  float: right;
-  margin-left: 38px;
+  display: inline-block;
+    margin-right: 38px;
 }
 
-#desktopMenu li:nth-child(4){
-  float: right;
-  margin-left: 38px;
+.flex-direction-nav{
+  display: none !important;
 }
 
 #lowerBar{
@@ -520,16 +525,179 @@ margin-right: 38px;
 }
 
 .footerImage{
-  height: 230px;
+  height: 190px;
+  position: absolute;
 }
 
-@media only screen and (max-width: 767px) {
+footer{
+  padding: 0 !important;
+  background: #F4FAFA !important;
+  width: 100%;
+  height: 190px;
+}
+
+#swCart{
+  background-image: url("/Assets/Images/cart.png");
+  background-repeat: no-repeat;
+  width: 35px;
+  display: block;
+  background-size: contain;
+  position: absolute;
+  right: -80px;
+  top: 28px;
+}
+
+#swItems{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: #F7971D;
+  border-radius: 100%;
+  position: relative;
+  top: 7px;
+  right: 7px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  color: #FFF;
+  box-sizing: border-box;
+}
+
+.footerNavWrapper{
+  position: relative;
+  float: right;
+  top: 32px;
+  margin-right: 148px;
+}
+
+.footerNavSection{
+display: inline-block;
+}
+
+.sectionOne{
+  margin-right: 75px;
+}
+
+.sectionTwo{
+  margin-right: 45px;
+}
+
+.bottomSection{
+margin-top: 14px;
+}
+
+.instagramSection, .instagramSection a{
+  color: #262223 !important;
+  font-size: 16px;
+  line-height: 22px;
+  display: inline-block;
+}
+
+.instagramSection img{
+  border: 0;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  margin-right: 8px;
+}
+
+.copyrightSection{
+  font-size: 12px;
+  float: right;
+  color: #262223;
+  position: relative;
+  top: 8px;
+}
+
+.fnHeader{
+  color: #262223;
+  font-family: DidotItalic;
+  font-size: 20px;
+}
+
+.fnLink{
+  display: block;
+  color: #262223 !important;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.btn{
+  background-color: hsl(34, 93%, 54%) !important;
+  font-family: DidotItalic !important;
+  font-size: 16px !important;
+}
+
+.btn_over, .btn:hover{
+  background-color: #a06114 !important;
+  font-family: DidotItalic !important;
+  font-size: 16px !important;
+  color: #FFF !important;
+}
+
+@media only screen and (max-width: 1298px) {
+  .footerImage{
+    display: none;
+  }
+
+  .footerNavWrapper{
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+    float: none;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  footer{
+    height: 100%;
+    padding-bottom: 60px !important;
+  }
+
+  .footerNavWrapper{
+    margin-left: 38px;
+    left: 0;
+    transform: translateX(0);
+  }
+  
+.footerNavSection{
+  display: block;
+  }
+
+  .sectionOne{
+    margin-right: 0;
+    margin-bottom: 22px;
+  }
+  
+  .sectionTwo{
+    margin-right: 0;
+    margin-bottom: 22px;
+  }
+
+  .copyrightSection, .instagramSection{
+    display: block;
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 1168px){
+ul#desktopMenu {
+    display: none;
+}
+}
+
+
+@media only screen and (max-width: 1168px) {
   .swMobile {
     display: block;
   }
 }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 1168px) {
   header, .swBanner {
     display: block;
   }
