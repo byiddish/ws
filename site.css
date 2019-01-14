@@ -782,7 +782,7 @@ button:hover {
   display: block;
 }
 .wrapper {
-  max-width: 980px;
+  max-width: 1100px;
   margin: 0 auto;
   position: relative;
 }
@@ -1614,7 +1614,7 @@ ul#desktopMenu li ul li:hover {
   border: 1px solid #eae9e6;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1310px) {
   html {
     padding: 0 !important;
   }
@@ -2036,13 +2036,17 @@ header {
   background-color: rgb(255, 152, 0);
 }
 
+.top-menu.swMobile{
+  margin-bottom: 50px
+}
+
 nav#catNavMenu {
   width: 100% !important;
   margin-top: 30px !important;
 }
 
 ul#desktopMenu li a {
-  font-size: 24px !important;
+  font-size: 22px !important;
   font-family: DidotItalic !important;
   text-transform: lowercase !important;
   color: rgb(0, 72, 81);
@@ -2070,17 +2074,35 @@ ul#desktopMenu li a {
 
 #desktopMenu li:nth-child(1) {
   float: left;
-  margin-right: 69px;
+  margin-right: 32px;
 }
 
 #desktopMenu li:nth-child(2) {
   float: left;
-  margin-right: 38px;
+  margin-right: 32px;
 }
 
 #desktopMenu li:nth-child(3) {
-  display: inline-block;
-  margin-right: 38px;
+ float: left;
+  margin-right: 20px;
+}
+
+#desktopMenu li:nth-child(4) {
+  float: right;
+   text-align:right;
+  margin-left: 20px;
+}
+
+#desktopMenu li:nth-child(5) {
+  float: right;
+   text-align:right;
+  margin-left: 20px;
+}
+
+#desktopMenu li:nth-child(6) {
+  float: right;
+  text-align:right;
+  margin-left: 0px;
 }
 
 .flex-direction-nav {
@@ -2367,19 +2389,36 @@ footer {
   border-top: 1px solid rgb(255, 152, 0) !important;
 }
 
-@media only screen and (max-width: 1168px) {
+.listingOption:first-of-type, .listingTitle:first-of-type{
+  display: none;
+}
+
+.txtAreaStyle{
+  width: 100%;
+}
+
+#divOptionsBlock .textlimit-textarea{
+  margin: 0;
+  float: right;
+}
+
+@media only screen and (max-width: 1310px) {
   ul#desktopMenu {
     display: none;
   }
 }
 
-@media only screen and (max-width: 1168px) {
+@media only screen and (max-width: 1310px) {
+  .show-mobile,
+  .slicknav_menu,
+  #mobileCart,
+  #mobileMenu,
   .swMobile {
     display: block;
   }
 }
 
-@media only screen and (min-width: 1168px) {
+@media only screen and (min-width: 1310px) {
   header,
   .swBanner {
     display: block;
