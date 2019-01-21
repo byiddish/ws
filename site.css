@@ -2248,6 +2248,8 @@ footer {
 
 .product-container .product-item .img img {
   max-width: 300px;
+  width: 300px;
+  max-height: 300px;
 }
 
 .product-item .price {
@@ -2323,6 +2325,7 @@ footer {
   text-transform: uppercase;
   font-weight: 300;
   color: rgb(255, 152, 0) !important;
+  margin-bottom: 96px;
 }
 
 #listing0 h1.page_headers {
@@ -2395,6 +2398,14 @@ footer {
 
 .txtAreaStyle{
   width: 100%;
+}
+
+ul li{
+  text-align: left !important;
+}
+
+.opt-field label{
+  display: none !important;
 }
 
 #divOptionsBlock .textlimit-textarea{
