@@ -65,8 +65,8 @@ body * {
 
 body {
   font-family: "Brandon", sans-serif;
-  font-size: 20px;
-  color: #231f20;
+  font-size: 16px;
+  color: rgb(0, 72, 81);
   background: #fff;
   font-weight: 400;
   padding: 0;
@@ -510,8 +510,7 @@ td {
 }
 /*A:: Controls the way the all Links without an associated style display before a user clicks or mouses over them.*/
 a {
-  color: #000;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   text-decoration: none;
   font-weight: 400;
@@ -523,8 +522,7 @@ a:hover {
 }
 /*A:visited:: After a user has visited that section.*/
 a:visited {
-  color: #000;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   text-decoration: none;
   font-weight: 400;
@@ -2411,6 +2409,94 @@ ul li{
 #divOptionsBlock .textlimit-textarea{
   margin: 0;
   float: right;
+}
+
+.titles2 {
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #EEE;
+  color:rgb(0, 72, 81);
+  padding: 4px;
+}
+
+.row .item-total {
+  font-weight: bold;
+  color: rgb(255, 152, 0);
+}
+
+.row a {
+  color: rgb(0, 72, 81);
+  font-size: 16px;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.row{
+	font-size:16px !important;
+}
+
+.shoppingCartTotal{
+  font-size: 16px;
+}
+
+.update-qty {
+  display: block;
+  font-size: 11px !important;
+  margin: 5px 0 0;
+}
+
+.header{
+  color: rgb(0, 72, 81);
+  font-size: 16px;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.shipQuote .shipquote-msg, .coupon-msg{
+  font-size: 16px;
+}
+
+.shoppingCartTotal .item-total, .shoppingCartTotal .item-total strong{
+  color: rgb(255, 152, 0) !important;
+}
+
+.chk-buttons a{
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 15px;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  background: rgb(255, 152, 0) !important;
+  color: #fff !important;
+}
+
+.loginmessage2{
+  font-size: 16px;
+}
+
+#viewCart .chk-buttons .icon-left-open{
+  color: #fff !important;
+}
+
+.header h3 {
+  font-weight: 400;
+}
+
+input, select {
+  font-size: 16px !important;
 }
 
 @media only screen and (max-width: 1310px) {
