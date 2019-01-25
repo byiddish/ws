@@ -2088,13 +2088,13 @@ ul#desktopMenu li a {
 #desktopMenu li:nth-child(4) {
   float: right;
    text-align:right;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 #desktopMenu li:nth-child(5) {
   float: right;
    text-align:right;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 #desktopMenu li:nth-child(6) {
@@ -2260,6 +2260,44 @@ footer {
   font-size: 14px;
 }
 
+.item, .item span, .MsoNormal span, .info, .info span{
+  color: rgb(0, 72, 81) !important;
+  font-family: "Brandon", sans-serif !important; 
+}
+
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor{
+  color: rgb(0, 72, 81) !important;
+  font-family: "Brandon", sans-serif !important; 
+}
+
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
+  color:  rgb(0, 72, 81) !important;
+  background-color: #fff;
+  border-top: 3px solid  rgb(0, 72, 81) !important;
+}
+
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor{
+  background-color: rgb(0, 72, 81) !important;
+}
+
+.slicknav_nav{
+  background-color: rgb(0, 72, 81) !important;
+}
+
+.slicknav_nav a.cat:hover, .slicknav_nav a.cat:visited:hover {
+  background-color: transparent !important;
+}
+
+.slicknav_nav .slicknav_row:hover {
+  background-color: rgb(255, 152, 0) !important;
+  color: rgb(0, 72, 81) !important;
+}
+
+.product-item .img {
+  min-height: 300px;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 1298px) {
   .footerImage {
     display: none;
@@ -2323,7 +2361,6 @@ footer {
   text-transform: uppercase;
   font-weight: 300;
   color: rgb(255, 152, 0) !important;
-  margin-bottom: 96px;
 }
 
 #listing0 h1.page_headers {
@@ -2495,14 +2532,64 @@ ul li{
   font-weight: 400;
 }
 
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor{
+  color: #fff !important;
+}
+
 input, select {
   font-size: 16px !important;
+}
+
+#mainContent {
+  width: 100% !important;
+}
+
+.slicknav_nav{
+  background: rgb(0, 72, 81) !important;
+}
+
+.m-search button {
+  background: rgb(255, 152, 0) !important;
+}
+
+a.menu:visited:hover {
+  color: rgb(255, 152, 0) !important;
+  text-decoration: none;
+}
+
+#closeSlideMenu i {
+  color: rgb(255, 152, 0) !important;
+}
+
+.m-search form {
+  margin-bottom: 10px;
+}
+
+.mobileLogo{
+  position: absolute;
+  width: 185px;
+  top: 10px;
+  left: calc(50% - 92.5px);
+}
+
+@media only screen and (max-width: 1310px){
+.cbp-spmenu-vertical a {
+    border: none;
+    padding: 6px 2px;
+}
 }
 
 @media only screen and (max-width: 1310px) {
   ul#desktopMenu {
     display: none;
   }
+}
+
+@media only screen and (max-width: 1310px){
+.cbp-spmenu {
+    background: rgb(0, 72, 81) !important;
+    position: fixed;
+}
 }
 
 @media only screen and (max-width: 1310px) {
