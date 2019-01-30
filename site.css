@@ -2035,7 +2035,8 @@ header {
 }
 
 .top-menu.swMobile{
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  height: 85px;
 }
 
 nav#catNavMenu {
@@ -2148,6 +2149,40 @@ footer {
   font-size: 14px;
   color: rgb(0, 72, 81);
   box-sizing: border-box;
+}
+
+#swMobileCart {
+  background-image: url(/Assets/Images/cart.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  display: block;
+  background-size: contain;
+  position: absolute;
+  top: 46px;
+  right: 30px;
+}
+
+#swMobileItems {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: #fff;
+  border-radius: 100%;
+  position: relative;
+  top: -2px;
+  right: 5px;
+  text-align: center;
+  line-height: 14px;
+  font-size: 10px;
+  color: rgb(0, 72, 81);
+  box-sizing: border-box;
+}
+
+#mobileMenu i, .icon-menu {
+  position: absolute;
+  top: 38px;
+  color: rgb(0, 72, 81) !important;
+  text-shadow: none;
 }
 
 .footerNavWrapper {
@@ -2566,10 +2601,28 @@ a.menu:visited:hover {
 }
 
 .mobileLogo{
+  height: 65px;
   position: absolute;
-  width: 185px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 10px;
-  left: calc(50% - 92.5px);
+}
+
+.slicknav_nav a.cat, .slicknav_nav a.cat:visited {
+  height: 40px;
+}
+
+.sub-categories .img img {
+  max-width: 300px;
+  width: 300px;
+}
+
+.icon-ellipsis-vert {
+  top: 41px !important;
+}
+
+#home .product-item .img img {
+  border: 3px solid rgb(255, 152, 0);
 }
 
 @media only screen and (max-width: 1310px){

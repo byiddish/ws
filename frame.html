@@ -40,9 +40,10 @@
   <div id="mainContainer">
     <div class="top-menu swMobile">
       <div class="wrapper">
-        <img class="mobileLogo" src="/assets/images/SiegelmansBlueLogo.png" />
+        <a href="/"><img class="mobileLogo" src="/assets/images/SiegelmansBlueLogo.png" /></a>
         <a id="mobileMenu" class="show-mobile"><i class="icon-ellipsis-vert"></i></a>
-        <a href="view_cart.asp" id="mobileCart" class=""><i class="icon-basket"></i></a>
+        <!-- <a href="view_cart.asp" id="mobileCart" class=""><i class="icon-basket"></i></a> -->
+        <a id="swMobileCart" href="view_cart.asp"><span id="swMobileItems">[ITEMSINCART]</span></a>
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="showSlideMenu">
           <a id="closeSlideMenu" class="show-mobile"><i class="icon-cancel-circled"></i></a>
           <ul>
@@ -66,7 +67,8 @@
             </div>
             <!--END: FRAME_SEARCH-->
 
-            <a id="cart" href="view_cart.asp" class="hide-tab"><span id="noItems">[ITEMSINCART]</span></a>
+            <!-- <a id="cart" href="view_cart.asp" class="hide-tab"><span id="noItems">[ITEMSINCART]</span></a> -->
+            <!-- <a id="swMobileCart" href="view_cart.asp"><span id="swMobileItems">[ITEMSINCART]</span></a> -->
 
             <!--START: FRAME_MENU-->
             <!--START: menuitems_view-->
