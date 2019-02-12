@@ -2625,6 +2625,25 @@ a.menu:visited:hover {
   border: 3px solid rgb(255, 152, 0);
 }
 
+.header-specials {
+  color: rgb(255, 152, 0) !important;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .2em;
+  line-height: 26px;
+  margin: 20px 0 60px;
+  padding: 20px 0;
+  font-size: 26px;
+  width: 100%;
+  border: none;
+}
+
+#home .product-item .img img {
+  max-width: 300px;
+  border: none;
+}
+
 @media only screen and (max-width: 1310px){
 .cbp-spmenu-vertical a {
     border: none;
